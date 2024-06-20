@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductsController;
 
@@ -51,6 +52,12 @@ Route::post('/logout', LogoutController::class)->name('logout')->middleware('aut
 // product Modules
 Route::get('/products', [ProductsController::class, 'index'])->name('products');
 
+Route::get('/products/list', [ProductsController::class, 'listProductsAdmin'])->name('products/list')->middleware('auth');
+
 Route::get('/products/add', [ProductsController::class, 'add'])->name('addProducts')->middleware('auth');
 
 Route::post('/products/add', [ProductsController::class, 'store'])->name('addProducts')->middleware('auth');
+
+//Admin Module
+
+Route::get('/admin', [AdminController::class, 'index'])->name('admin');

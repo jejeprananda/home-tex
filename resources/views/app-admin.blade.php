@@ -19,13 +19,12 @@
 </head>
 
 <body>
-    @include('/web/layout/navbar')
-    @yield('content')
-    @include('web/layout/footer')
-
-
-        @include('web/layout/copyright')
-
+    <div class="">
+        @include('admin.layout.sidebar')
+    </div>
+    <div class="ml-48">
+        @yield('content')
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </body>
 

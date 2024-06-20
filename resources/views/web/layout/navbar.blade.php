@@ -2,7 +2,8 @@
 <nav class="bg-gray-800">
     <div class="container flex">
         <a href="/"><img src="/images/logo.png" class="h-20 relative left-0"></a>
-        <div class="px-8 w-48 py-8 bg-primary md:flex justify-center item-center text-center cursor-pointer relative group hidden">
+        <div
+            class="px-8 w-48 py-8 bg-primary md:flex justify-center item-center text-center cursor-pointer relative group hidden">
             <span class="capitalize ml-2 text-white">Categories</span>
 
             <!-- dropdown -->
@@ -44,8 +45,14 @@
             </div>
             <div class="flex">
                 @auth
-                    <a href="{{ route('user/profile') }}"
-                        class="text-gray-200 hover:text-white transition w-24 m-0 p-2">Profile</a>
+                    @if (auth()->user()->role == '0')
+                        <a href="{{ route('admin') }}"
+                            class="text-gray-200 hover:text-white transition w-32 m-0 p-2">Admin Dash</a>
+                    @else
+                        <a href="{{ route('user/profile') }}"
+                            class="text-gray-200 hover:text-white transition w-24 m-0 p-2">Profile</a>
+                    @endif
+
                     <form action="{{ route('logout') }}" method="post" class="w-24 m-0">
                         @csrf
                         <button type="submit" class="bg-primary text-white rounded p-2">Logout</button>

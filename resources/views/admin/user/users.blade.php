@@ -1,4 +1,4 @@
-@extends('app-web')
+@extends('app-admin')
 
 @section('content')
 <div class="p-24">
@@ -7,7 +7,6 @@
             <tr class="text-center text-bold">
                 <th scope="col" class="px-6 py-3">#</th>
                 <th scope="col" class="px-6 py-3">nama</th>
-                <th scope="col" class="px-6 py-3">password</th>
                 <th scope="col" class="px-6 py-3">email</th>
                 <th scope="col" class="px-6 py-3">no handphone</th>
                 <th scope="col" colspan="3" class="px-6 py-3">Aksi</th>
@@ -19,7 +18,6 @@
             <tr class="bg-white text-center border-b dark:bg-gray-800 dark:border-gray-700">
                 <td class="px-6 py-4">{{ $user->id }}</td>
                 <td class="px-6 py-4">{{ $user->name }}</td>
-                <td class="px-6 py-4">{{ $user->password }}</td>
                 <td class="px-6 py-4">{{ $user->email }}</td>
                 <td class="px-6 py-4">{{ $user->phone_number }}</td>
                 <td class="px-6 py-4 w-28">

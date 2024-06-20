@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <div class="bg-login h-screen">
+    <div class="bg-login min-h-screen">
         @include('/web/layout/navbar')
 
         {{-- Logo --}}
@@ -64,17 +64,14 @@
                     </div>
                 </form>
 
-                <p class="mt-4 text-center text-gray-600">Don't have account? <a href="{{route('user/create')}}"
+                <p class="mt-4 text-center text-gray-600">Don't have account? <a href="{{ route('user/create') }}"
                         class="text-primary">Register
                         now</a></p>
             </div>
         </div>
         <!-- ./login -->
-        <div class="absolute bottom-0 w-screen">
-            @include('web/layout/copyright')
-        </div>
-
     </div>
+    @include('web/layout/copyright')
 </body>
 
 </html>

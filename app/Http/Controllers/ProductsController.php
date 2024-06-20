@@ -17,7 +17,7 @@ class ProductsController extends Controller
     }
 
     public function listProductsAdmin(){
-        //for view list product for admin
+        return view('admin.product.list');
     }
 
     public function add(){

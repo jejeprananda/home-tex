@@ -1,4 +1,4 @@
-@extends('app-web')
+@extends('app-admin')
 
 @section('content')
     <section class="bg-white dark:bg-gray-900">
