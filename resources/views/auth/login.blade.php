@@ -9,6 +9,8 @@
 
     <link rel="shortcut icon" href="/images/favicon/favicon.ico" type="image/x-icon">
 
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
     @vite('resources/css/main.css')
     @vite('resources/css/app.css')
 
