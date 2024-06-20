@@ -8,7 +8,7 @@
     <title>Login - Home</title>
 
     <link rel="shortcut icon" href="/images/favicon/favicon.ico" type="image/x-icon">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <div class="bg-login min-h-screen">
+    <div class="bg-login min-h-screen" style="background-image: url('/images/bg-large.jpg')">
         @include('/web/layout/navbar')
 
         {{-- Logo --}}
