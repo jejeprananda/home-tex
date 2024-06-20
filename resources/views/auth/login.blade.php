@@ -9,10 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon/favicon.ico" type="image/x-icon">
 
-    <link href="css/app.css" rel="stylesheet" />
-    <link href="css/main.css" rel="stylesheet" />
-    {{-- @vite('resources/css/main.css')
-    @vite('resources/css/app.css') --}}
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,6 +18,8 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
 </head>
 
 <body>
