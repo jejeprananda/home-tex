@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <div class="bg-login min-h-screen" style="background-image: url('/images/bg-large.jpg')">
+    <div class="bg-cover h-screen" style="background-image: url('/images/bg-large.jpg')">
         @include('/web/layout/navbar')
 
         {{-- Logo --}}
