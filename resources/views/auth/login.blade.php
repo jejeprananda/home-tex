@@ -11,8 +11,8 @@
 
     <link href="css/app.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
-    {{-- @vite('resources/css/main.css')
-    @vite('resources/css/app.css') --}}
+    @vite('resources/css/main.css')
+    @vite('resources/css/app.css')
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
