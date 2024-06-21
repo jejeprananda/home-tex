@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link href="css/app.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
-    @vite('resources/css/app.css')
-    @vite('resources/css/main.css')
+    {{-- @vite('resources/css/app.css')
+    @vite('resources/css/main.css') --}}
 </head>
 
 <body>
