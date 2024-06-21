@@ -13,6 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
         rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     {{-- @vite('resources/css/app.css')
     @vite('resources/css/main.css') --}}
     <link href="/css/app.css" rel="stylesheet" />
@@ -20,14 +21,31 @@
 </head>
 
 <body>
+
+
+
+
     @include('/web/layout/navbar')
     @yield('content')
     @include('web/layout/footer')
 
 
-        @include('web/layout/copyright')
+    @include('web/layout/copyright')
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script>
+        function swal() {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Anda harus Login untuk menambah keranjang!",
+                footer: '<a href="/login">Login</a>',
+                showCloseButton: true,
+                showConfirmButton: false,
+            });
+        }
+    </script>
 </body>
 
 </html>

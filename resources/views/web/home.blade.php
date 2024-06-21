@@ -131,9 +131,15 @@
                             <div class="text-xs text-gray-500 ml-3">Stock : {{ $product->stock }}</div>
                         </div>
                     </div>
-                    <a href="#"
-                        class="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add
-                        to cart</a>
+                    @auth
+                        <a onclick="swal()"
+                            class="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add
+                            to cart</a>
+                    @else
+                        <a onclick="swal()"
+                            class="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add
+                            to cart</a>
+                    @endauth
                 </div>
             @endforeach
         </div>
@@ -187,9 +193,15 @@
                             <div class="text-xs text-gray-500 ml-3">Stock : {{ $product->stock }}</div>
                         </div>
                     </div>
-                    <a href="#"
-                        class="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add
-                        to cart</a>
+                    @auth
+                        <a onclick="swal()"
+                            class="cursor-pointer block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add
+                            to cart</a>
+                    @else
+                        <a onclick="swal()"
+                            class=" cursor-pointer block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add
+                            to cart</a>
+                    @endauth
                 </div>
             @endforeach
         </div>

@@ -78,7 +78,11 @@
                                     d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z" />
                             </svg>
                             <p class="text-sm font-medium text-primary-700 dark:text-primary-500">
-                                pengiriman ke {{ auth()->user()->address }}
+                                @auth
+                                    pengiriman ke {{ auth()->user()->address }}
+                                @else
+                                    Login untuk melihat alamat pengiriman
+                                @endauth
                             </p>
                         </div>
                     </div>
@@ -98,86 +102,34 @@
 
                     <div class="flex items-center justify-between mt-6 sm:gap-4 sm:flex sm:items-center sm:mt-8">
                         <div class="sm:gap-4 sm:items-center sm:flex">
-                            <a href="#" title=""
-                                class="text-white mt-4 sm:mt-0 bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800 flex items-center justify-center"
-                                role="button">
-                                <svg class="w-5 h-5 -ms-2 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6" />
-                                </svg>
+                            @auth
+                                <a onclick="swal()" title=""
+                                    class="text-white mt-4 sm:mt-0 bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800 flex items-center justify-center"
+                                    role="button">
+                                @else
+                                    <a onclick="swal()" title=""
+                                        class="text-white mt-4 sm:mt-0 bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800 flex items-center justify-center"
+                                        role="button">
+                                    @endauth
+                                    <svg class="w-5 h-5 -ms-2 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6" />
+                                    </svg>
 
-                                Add to cart
-                            </a>
+                                    Add to cart
+                                </a>
                         </div>
 
                     </div>
-
-
                     <div class="sm:col-span-2 mt-4">
                         <p class="text-base font-medium text-gray-900 dark:text-white">
-                            Delivery
+                            Description
                         </p>
-
-                        <div class="flex flex-col gap-4 mt-2 sm:flex-row">
-                            <div class="flex">
-                                <div class="flex items-center h-5">
-                                    <input id="shipping-checkbox" aria-describedby="shipping-checkbox-text" name="shipping"
-                                        type="radio" value=""
-                                        class="w-4 h-4 bg-gray-100 border-gray-300 rounded-full text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-                                </div>
-                                <div class="text-sm ms-2">
-                                    <label for="shipping-checkbox" class="font-medium text-gray-900 dark:text-white">
-                                        Texere Send - Rp70.000
-                                    </label>
-                                    <p id="shipping-checkbox-text"
-                                        class="text-xs font-normal text-gray-500 dark:text-gray-400">
-                                        (Gratis Biaya Pasang)
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex">
-                                <div class="flex items-center h-5">
-                                    <input id="pickup-checkbox" aria-describedby="pickup-checkbox-text" name="shipping"
-                                        type="radio" value=""
-                                        class="w-4 h-4 bg-gray-100 border-gray-300 rounded-full text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-                                </div>
-                                <div class="text-sm ms-2">
-                                    <label for="pickup-checkbox" class="font-medium text-gray-900 dark:text-white">
-                                        Kurir Pihak Ketiga
-                                    </label>
-                                    <p"
-                                        class="block text-xs underline text-primary-700 hover:no-underline dark:text-primary-500">
-                                        Biaya Menyesuaikan kurir
-                                        </p>
-                                </div>
-                            </div>
-
-                            <div class="flex">
-                                <div class="flex items-center h-5">
-                                    <input id="pickup-store-checkbox" aria-describedby="pickup-store-checkbox-text"
-                                        name="shipping" type="radio" value=""
-                                        class="w-4 h-4 bg-gray-100 border-gray-300 rounded-full text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                                        disabled />
-                                </div>
-                                <div class="text-sm ms-2">
-                                    <label for="pickup-store-checkbox"
-                                        class="font-medium text-gray-400 dark:text-gray-500">
-                                        Pickup dari toko kami
-                                    </label>
-                                    <p id="pickup-store-checkbox-text"
-                                        class="text-xs font-normal text-gray-400 dark:text-gray-500">
-                                        Not Available for Now
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
                         <hr class="my-6 md:my-8 border-gray-200 dark:border-gray-800" />
-
                         <p class="mb-6 text-gray-500 dark:text-gray-400">
-                            {{$product->description}}
+                            {{ $product->description }}
                         </p>
                     </div>
                 </div>

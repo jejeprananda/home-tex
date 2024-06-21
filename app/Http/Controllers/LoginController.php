@@ -23,13 +23,11 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            // Log::info('User logged in successfully.', ['email' => $credentials['email']]);
-
             return redirect()->intended('/');
         }
 
-        // Log::warning('Failed login attempt.', ['email' => $credentials['email']]);
-
-        return back();
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records or the password is invalid.',
+        ]);
     }
 }

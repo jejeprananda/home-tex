@@ -16,16 +16,17 @@
     <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link href="css/app.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     {{-- @vite('resources/css/app.css')
     @vite('resources/css/main.css') --}}
 </head>
 
-<body>
+<body class="bg-gray-50">
     <div class="flex">
         <div class="relative">
             @include('admin.layout.sidebar')
         </div>
-        <div class="relative left-8 top-8 mt-8">
+        <div class="w-full">
             @yield('content')
         </div>
     </div>
