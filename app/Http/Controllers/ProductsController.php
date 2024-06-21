@@ -44,13 +44,15 @@ class ProductsController extends Controller
             $productName = $request->input('name');
             $files = $request->file('img');
 
-            foreach ($files as $index => $file) {
-                $extension = $file->getClientOriginalExtension();
-                $fileName = $productName . '_' . $index . '.' . $extension;
-                $filePath = 'images/products/' . $fileName;
+            if($request->hasFile('img')){
+                foreach ($files as $index => $file) {
+                    $extension = $file->getClientOriginalExtension();
+                    $fileName = $productName . '_' . $index . '.' . $extension;
+                    $filePath = 'images/products/' . $fileName;
 
-                $filePath = $file->storeAs('images/products', $fileName, 'public');
-                $filePaths[] = $filePath;
+                    $file->move(public_path('/images/products'), $fileName);
+                    $filePaths[] = $filePath;
+                }
             }
 
             Product::create([
