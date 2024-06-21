@@ -16,6 +16,20 @@ class ProductsController extends Controller
         ]);
     }
 
+    public function category(Product $product) {
+        $products = Product::get();
+
+        return view('web/product/category', [
+            'products' => $products
+        ]);
+    }
+
+    public function show(Product $product) {
+        return view('web/product/detail', [
+            'product' => $product,
+        ]);
+    }
+
     public function listProductsAdmin(){
         return view('admin.product.list');
     }
@@ -27,25 +41,28 @@ class ProductsController extends Controller
     public function store(ProductsRequest $request){
         $request->validated();
 
-        $productName = $request->input('name');
-        $file = $request->file('img');
-        $extension = $file->getClientOriginalExtension();
-        $fileName = $productName . '.' . $extension;
-        $filePath = 'images/products/' . $fileName;
+            $productName = $request->input('name');
+            $files = $request->file('img');
 
-        $file->move(public_path('images/products'), $fileName);
+            foreach ($files as $index => $file) {
+                $extension = $file->getClientOriginalExtension();
+                $fileName = $productName . '_' . $index . '.' . $extension;
+                $filePath = 'images/products/' . $fileName;
 
-        Product::create([
-            'name' => $request->input('name'),
-            'category' => $request->input('category'),
-            'price' => $request->input('price'),
-            'discount' => $request->input('discount'),
-            'stock' => $request->input('stock'),
-            'img' => $filePath,
-            'description' => $request->input('description'),
+                $file->move(public_path('images/products'), $fileName);
+                $filePaths[] = $filePath;
+            }
 
-        ]);
+            Product::create([
+                'name' => $request->input('name'),
+                'category' => $request->input('category'),
+                'price' => $request->input('price'),
+                'discount' => $request->input('discount'),
+                'stock' => $request->input('stock'),
+                'img' => $filePaths, // Store file paths as a JSON string
+                'description' => $request->input('description'),
+            ]);
 
-        return redirect('/products');
-    }
+            return redirect('/products');
+        }
 }

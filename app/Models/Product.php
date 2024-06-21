@@ -20,4 +20,8 @@ class Product extends Model
         'description',
         'rating'
     ];
+
+    protected $casts = [
+        'img' => 'array',
+    ];
 }

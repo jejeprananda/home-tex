@@ -34,12 +34,11 @@
                         <select id="category" name="category"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                             <option selected="">Pilih Kategori</option>
-                            <option value="SF">Sofa</option>
-                            <option value="TR">Terrace</option>
-                            <option value="BD">Bed</option>
-                            <option value="OF">Office</option>
-                            <option value="OD">Outdor</option>
-                            <option value="MT">Mattres</option>
+                            <option value="AC">AC</option>
+                            <option value="TV">TV</option>
+                            <option value="CUCI">Mesin Cuci</option>
+                            <option value="BLENDER">Blender</option>
+                            <option value="KW">Kitchen Ware</option>
                         </select>
                     </div>
                     <div>
@@ -55,7 +54,7 @@
                             gambar produk</label>
                         <input
                             class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                            aria-describedby="file_input_help" id="img" type="file" name="img">
+                            aria-describedby="file_input_help" id="img" type="file" name="img[]" multiple>
                         <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">SVG, PNG, JPG or GIF
                             (Recomended 1080x800px).</p>
 

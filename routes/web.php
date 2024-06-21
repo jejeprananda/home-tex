@@ -52,6 +52,10 @@ Route::post('/logout', LogoutController::class)->name('logout')->middleware('aut
 // product Modules
 Route::get('/products', [ProductsController::class, 'index'])->name('products');
 
+Route::get('/products/show/{product:id}', [ProductsController::class, 'show'])->name('products/show');
+
+Route::get('/products/category/{product:category}', [ProductsController::class, 'category'])->name('products/category');
+
 Route::get('/products/list', [ProductsController::class, 'listProductsAdmin'])->name('products/list')->middleware('auth');
 
 Route::get('/products/add', [ProductsController::class, 'add'])->name('addProducts')->middleware('auth');

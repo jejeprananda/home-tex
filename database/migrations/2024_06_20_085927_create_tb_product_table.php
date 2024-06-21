@@ -18,7 +18,7 @@ return new class extends Migration
             $table->integer('price')->nullable(false); // VARCHAR
             $table->integer('discount'); // VARCHAR
             $table->integer('stock')->nullable(false); // VARCHAR
-            $table->string('img')->nullable(false); // VARCHAR
+            $table->text('img')->nullable(false); // VARCHAR
             $table->string('description')->nullable(false); // VARCHAR
             $table->integer('rating')->nullable(false); // VARCHAR
             $table->timestamps(); // created_at and updated_at columns
