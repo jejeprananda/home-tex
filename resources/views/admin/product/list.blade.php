@@ -152,6 +152,7 @@
                                                 </div>
                                             @endfor
                                         </div>
+                                        <hr class="mt-4 mb-4">
                                         <div>
                                             <h6
                                                 class="mb-2 text-base leading-none font-medium text-gray-900 dark:text-white">
@@ -160,6 +161,7 @@
                                                 {{ $product->description }}
                                             </div>
                                         </div>
+                                        <hr class="mt-4 mb-4">
 
                                         <div class="flex items-center space-x-3 mt-4">
                                             <button type="button"
