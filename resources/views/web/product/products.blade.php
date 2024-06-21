@@ -102,9 +102,12 @@
                         </div>
                         <div class="pt-4 pb-3 px-4">
                             <a href="#">
-                                <h4 class="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">
-                                    {{ $product->name }}
-                                </h4>
+                                <div class="h-20 overflow-hidden">
+                                    <h4
+                                        class="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">
+                                        {{ $product->name }}
+                                    </h4>
+                                </div>
                             </a>
                             <div class="flex items-baseline mb-1 space-x-2">
                                 <p class="text-xl text-primary font-semibold">
