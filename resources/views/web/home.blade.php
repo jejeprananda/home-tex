@@ -101,11 +101,17 @@
                     </div>
                     <div class="pt-4 pb-3 px-4">
                         <a href="#">
-                            <h4 class="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">{{}}</h4>
+                            <h4 class="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">
+                                {{ $product->name }}</h4>
                         </a>
                         <div class="flex items-baseline mb-1 space-x-2">
-                            <p class="text-xl text-primary font-semibold">Rp600.000</p>
-                            <p class="text-sm text-gray-400 line-through">Rp850.000</p>
+                            <p class="text-xl text-primary font-semibold">
+                                Rp{{ number_format($product->price - ($product->price / 100) * $product->discount, 0, ',', '.') }}
+                            </p>
+                            @if ($product->discount != 0)
+                                <p class="text-sm text-gray-400 line-through">
+                                    Rp{{ number_format($product->price, 0, ',', '.') }}</p>
+                            @endif
                         </div>
                         <div class="flex items-center">
                             <div class="flex gap-1 text-sm text-yellow-400">
@@ -115,7 +121,7 @@
                                 <span><i class="fa-solid fa-star"></i></span>
                                 <span><i class="fa-solid fa-star"></i></span>
                             </div>
-                            <div class="text-xs text-gray-500 ml-3">(150)</div>
+                            <div class="text-xs text-gray-500 ml-3">Stock : {{ $product->stock }}</div>
                         </div>
                     </div>
                     <a href="#"
