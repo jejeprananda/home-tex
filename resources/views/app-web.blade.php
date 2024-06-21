@@ -13,8 +13,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
         rel="stylesheet">
-    @vite('resources/css/app.css')
-    @vite('resources/css/main.css')
+    {{-- @vite('resources/css/app.css')
+    @vite('resources/css/main.css') --}}
     <link href="/css/app.css" rel="stylesheet" />
     <link href="/css/main.css" rel="stylesheet" />
 </head>
