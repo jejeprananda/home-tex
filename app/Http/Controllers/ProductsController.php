@@ -50,7 +50,7 @@ class ProductsController extends Controller
                     $fileName = $productName . '_' . $index . '.' . $extension;
                     $filePath = 'images/products/' . $fileName;
 
-                    $file->move(public_path('/images/products'), $fileName);
+                    // $file->move(public_path('/images/products'), $fileName);
                     $filePaths[] = $filePath;
                 }
             }
