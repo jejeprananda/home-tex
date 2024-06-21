@@ -56,9 +56,7 @@
                         </a>
                         <a href="/products/category/TV" class="cursor-pointer">
                             <div class="flex items-center mb-2">
-
                                 <label for="cat-2" class="text-gray-600 ml-3 cursor-pointer">TV</label>
-
                             </div>
                         </a>
                         <a href="/products/category/CUCI" class="cursor-pointer">
@@ -74,6 +72,11 @@
                         <a href="/products/category/KW">
                             <div class="flex items-center mb-2">
                                 <label for="cat-4" class="text-gray-600 ml-3 cursor-pointer">Kitchen Ware</label>
+                            </div>
+                        </a>
+                        <a href="/products/category/KULKAS">
+                            <div class="flex items-center mb-2">
+                                <label for="cat-4" class="text-gray-600 ml-3 cursor-pointer">Kulkas</label>
                             </div>
                         </a>
                     </div>
@@ -101,7 +104,7 @@
                             </a>
                         </div>
                         <div class="pt-4 pb-3 px-4">
-                            <a href="#">
+                            <a href="{{ '/products/show/' . $product->id }}">
                                 <div class="h-20 overflow-hidden">
                                     <h4
                                         class="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">

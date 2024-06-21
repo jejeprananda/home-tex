@@ -76,6 +76,11 @@
                                 <label for="cat-4" class="text-gray-600 ml-3 cursor-pointer">Kitchen Ware</label>
                             </div>
                         </a>
+                        <a href="/products/category/KULKAS">
+                            <div class="flex items-center mb-2">
+                                <label for="cat-4" class="text-gray-600 ml-3 cursor-pointer">Kulkas</label>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -97,14 +102,17 @@
                     <div class="bg-white shadow rounded overflow-hidden group" key="{{ $product->id }}">
                         <div class="relative">
                             <a href="{{ '/products/show/' . $product->id }}">
-                                <img src="/{{ $product->img[0] }}" alt="product 1" class="w-full">
+                                <img src="/{{ $product->img[0] }}" alt="product 1" class="w-full h-48 object-cover">
                             </a>
                         </div>
                         <div class="pt-4 pb-3 px-4">
-                            <a href="#">
-                                <h4 class="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">
-                                    {{ $product->name }}
-                                </h4>
+                            <a href="{{ '/products/show/' . $product->id }}">
+                                <div class="h-20 overflow-hidden">
+                                    <h4
+                                        class="uppercase font-medium text-xl mb-2 text-gray-800 hover:text-primary transition">
+                                        {{ $product->name }}
+                                    </h4>
+                                </div>
                             </a>
                             <div class="flex items-baseline mb-1 space-x-2">
                                 <p class="text-xl text-primary font-semibold">

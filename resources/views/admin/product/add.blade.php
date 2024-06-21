@@ -39,6 +39,7 @@
                             <option value="CUCI">Mesin Cuci</option>
                             <option value="BLENDER">Blender</option>
                             <option value="KW">Kitchen Ware</option>
+                            <option value="KULKAS">Kulkas</option>
                         </select>
                     </div>
                     <div>
