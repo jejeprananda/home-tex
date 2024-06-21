@@ -25,7 +25,7 @@
         <div class="relative">
             @include('admin.layout.sidebar')
         </div>
-        <div class="relative left-8 top-8">
+        <div class="relative left-8 top-8 mt-8">
             @yield('content')
         </div>
     </div>

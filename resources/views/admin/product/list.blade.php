@@ -22,15 +22,15 @@
                     <td class="px-6 py-4">{{ $product->stock }}</td>
                     <td class="px-6 py-4">{{ $product->price }}</td>
                     <td class="px-6 py-4">{{ $product->discount }}</td>
-                    <td class="px-6 py-4 w-28">
+                    {{-- <td class="px-6 py-4 w-28">
                         <a href="/products/{{ $product->id }}/edit"><Button
                                 class="p-2 w-24 bg-green-500 rounded text-white">Edit Profile</Button></a>
-                    </td>
+                    </td> --}}
                     <td class="px-6 py-4 w-28">
                         <form action="/products/destroy/{{ $product->id }}" method="post">
                             @method('DELETE')
                             @csrf
-                            <button type="submit"><Button class="p-2 w-28 bg-primary rounded text-white">Delete
+                            <button type="submit"><Button class="p-2 w-28 bg-red-700 rounded text-white">Delete
                                     Profile</Button></button>
                         </form>
                     </td>
