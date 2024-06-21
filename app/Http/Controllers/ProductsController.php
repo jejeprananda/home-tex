@@ -49,7 +49,7 @@ class ProductsController extends Controller
                 $fileName = $productName . '_' . $index . '.' . $extension;
                 $filePath = 'images/products/' . $fileName;
 
-                $file->storeAs('public/images/products', $fileName);
+                $filePath = $file->storeAs('images/products', $fileName, 'public');
                 $filePaths[] = $filePath;
             }
 
