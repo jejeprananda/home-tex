@@ -16,16 +16,18 @@
     <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link href="css/app.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
-    {{-- @vite('resources/css/app.css')
-    @vite('resources/css/main.css') --}}
+    @vite('resources/css/app.css')
+    @vite('resources/css/main.css')
 </head>
 
 <body>
-    <div class="">
-        @include('admin.layout.sidebar')
-    </div>
-    <div class="ml-48">
-        @yield('content')
+    <div class="flex">
+        <div class="relative">
+            @include('admin.layout.sidebar')
+        </div>
+        <div class="relative left-8 top-8">
+            @yield('content')
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </body>

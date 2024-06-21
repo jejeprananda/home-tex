@@ -62,6 +62,8 @@ Route::get('/products/add', [ProductsController::class, 'add'])->name('addProduc
 
 Route::post('/products/add', [ProductsController::class, 'store'])->name('addProducts')->middleware('auth');
 
+Route::delete('/products/destroy/{product:id}', [ProductsController::class, 'destroy'])->name('products/destroy')->middleware('auth');
+
 //Admin Module
 
 Route::get('/admin', [AdminController::class, 'index'])->name('admin');

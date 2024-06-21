@@ -31,7 +31,10 @@ class ProductsController extends Controller
     }
 
     public function listProductsAdmin(){
-        return view('admin.product.list');
+        $products = Product::get();
+        return view('admin/product/list', [
+            'products' => $products
+        ]);
     }
 
     public function add(){
@@ -66,5 +69,11 @@ class ProductsController extends Controller
             ]);
 
             return redirect('/products');
+        }
+
+        public function destroy(Product $product){
+            $product->delete();
+
+            return redirect('/products/list');
         }
 }
