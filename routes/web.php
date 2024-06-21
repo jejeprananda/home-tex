@@ -5,12 +5,8 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductsController;
-
-// Web Page Route
-Route::get('/', function () {
-    return view('web/home');
-});
 
 Route::get('/wishlist', function () {
     return view('web/product/wishlist');
@@ -19,6 +15,10 @@ Route::get('/wishlist', function () {
 Route::get('/checkout', function () {
     return view('web/checkout');
 });
+
+// Home Module
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
 
 // User Module
 Route::get('/users', [UserController::class, 'index'])->name('users')->middleware('auth');

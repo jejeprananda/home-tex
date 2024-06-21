@@ -16,8 +16,8 @@ class ProductsController extends Controller
         ]);
     }
 
-    public function category(Product $product) {
-        $products = Product::get();
+    public function category($category) {
+        $products = Product::where('category', $category)->get();
 
         return view('web/product/category', [
             'products' => $products

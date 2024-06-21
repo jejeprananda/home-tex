@@ -97,7 +97,7 @@
                     <div class="bg-white shadow rounded overflow-hidden group" key="{{ $product->id }}">
                         <div class="relative">
                             <a href="{{ '/products/show/' . $product->id }}">
-                                <img src="/{{ $product->img[0] }}" alt="product 1" class="w-full">
+                                <img src="/{{ $product->img[0] }}" alt="product 1" class="w-full h-48 object-cover">
                             </a>
                         </div>
                         <div class="pt-4 pb-3 px-4">
