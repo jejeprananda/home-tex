@@ -35,7 +35,7 @@ class UserController extends Controller
 
         abort_if(!$user, 404);
 
-        return view('/web/user/profile', [
+        return view('web.user.profile', [
             'user' => $user,
         ]);
     }

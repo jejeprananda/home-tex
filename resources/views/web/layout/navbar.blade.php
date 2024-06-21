@@ -46,7 +46,7 @@
             <div class="flex">
                 @auth
                     @if (auth()->user()->role == '0')
-                        <a href="{{ route('admin') }}"
+                        <a href="{{ route('products/list') }}"
                             class="text-gray-200 hover:text-white transition w-32 m-0 p-2">Admin Dash</a>
                     @else
                         <a href="{{ route('user/profile') }}"
