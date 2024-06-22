@@ -32,6 +32,14 @@
 
     @include('web/layout/copyright')
 
+    {{-- Hubungi WA --}}
+    <a href="http://wa.me/08987847242" target="_blank">
+        <div class="fixed bottom-4 right-6 w-32">
+            <img src="/images/wa-logo.png" class="animate-bounce">
+            <p class="p-4 h-12 rounded bg-primary text-white font-bold text-center text-xs shadow-2xl">Hubungi Kami!</p>
+        </div>
+    </a>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <script>
