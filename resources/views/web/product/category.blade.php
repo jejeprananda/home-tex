@@ -81,6 +81,11 @@
                                 <label for="cat-4" class="text-gray-600 ml-3 cursor-pointer">Kulkas</label>
                             </div>
                         </a>
+                        <a href="/products/category/VACUUM">
+                            <div class="flex items-center mb-2">
+                                <label for="cat-4" class="text-gray-600 ml-3 cursor-pointer">Vacuum Cleaner</label>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -140,9 +145,17 @@
                                     class="cursor-pointer block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add
                                     to cart</a>
                             @else
-                                <a onclick="swal()"
-                                    class="cursor-pointer block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add
-                                    to cart</a>
+                                <form action="/order/add/cart" method="post">
+                                    @csrf
+                                    <input hidden type="text" name="user_id" id="user_id"
+                                        value="{{ auth()->user()->id }}">
+                                    <input hidden type="text" name="product_id" id="product_id"
+                                        value="{{ $product->id }}">
+                                    <input hidden type="text" name="quantity" id="quantity" value="1">
+                                    <button
+                                        class="cursor-pointer block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add
+                                        to cart</button>
+                                </form>
                             @endif
                         @else
                             <a onclick="swal()"

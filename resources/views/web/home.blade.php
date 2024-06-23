@@ -4,13 +4,13 @@
     <!-- banner -->
     <div class="bg-cover bg-no-repeat bg-center py-36" style="background-image: url('images/banner-bg.jpg');">
         <div class="container">
-            <h1 class="text-6xl text-gray-800 font-medium mb-4 capitalize">
+            <h1 class="text-6xl text-white font-medium mb-4 capitalize">
                 Koleksi terbaik untuk<br> Rumah anda
             </h1>
-            <p>Dari Inspirasi hingga Realisasi, <b class="text-primary">Home-Texere</b> Menyediakan alat elektronik dan
+            <p class="text-white">Dari Inspirasi hingga Realisasi, <b class="text-primary">Home-Texere</b> Menyediakan alat elektronik dan
                 kitchen ware yang Sempurna
                 untuk Anda!</p>
-            <p>Temukan berbagai pilihan teknologi yang elegan dan praktis untuk melengkapi setiap kebutuhan.</p>
+            <p class="text-white">Temukan berbagai pilihan teknologi yang elegan dan praktis untuk melengkapi setiap kebutuhan.</p>
             <div class="mt-12">
                 <a href="/products"
                     class="bg-primary border border-primary text-white px-8 py-3 font-medium
@@ -140,8 +140,8 @@
                         @else
                             <form action="/order/add/cart" method="post">
                                 @csrf
-                                <input hidden type="text" name="user_id" id="user_id" value="{{auth()->user()->id}}">
-                                <input hidden type="text" name="product_id" id="product_id" value="{{$product->id}}">
+                                <input hidden type="text" name="user_id" id="user_id" value="{{ auth()->user()->id }}">
+                                <input hidden type="text" name="product_id" id="product_id" value="{{ $product->id }}">
                                 <input hidden type="text" name="quantity" id="quantity" value="1">
                                 <button
                                     class="cursor-pointer block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add
@@ -212,9 +212,16 @@
                                 class="cursor-pointer block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add
                                 to cart</a>
                         @else
-                            <a onclick="swal()"
-                                class="cursor-pointer block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add
-                                to cart</a>
+                            <form action="/order/add/cart" method="post">
+                                @csrf
+                                <input hidden type="text" name="user_id" id="user_id"
+                                    value="{{ auth()->user()->id }}">
+                                <input hidden type="text" name="product_id" id="product_id" value="{{ $product->id }}">
+                                <input hidden type="text" name="quantity" id="quantity" value="1">
+                                <button
+                                    class="cursor-pointer block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add
+                                    to cart</button>
+                            </form>
                         @endif
                     @else
                         <a onclick="swal()"

@@ -40,6 +40,7 @@
                             <option value="BLENDER">Blender</option>
                             <option value="KW">Kitchen Ware</option>
                             <option value="KULKAS">Kulkas</option>
+                            <option value="VACUUM">Vacuum Cleaner</option>
                         </select>
                     </div>
                     <div>

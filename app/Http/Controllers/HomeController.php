@@ -13,4 +13,8 @@ class HomeController extends Controller
             'products' => $products,
         ]);
     }
+
+    public function about(){
+        return view('web.about');
+    }
 }

@@ -20,6 +20,8 @@ Route::get('/checkout', function () {
 // Home Module
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
+Route::get('/about', [HomeController::class, 'about'])->name('about');
+
 
 // User Module
 Route::get('/users', [UserController::class, 'index'])->name('users')->middleware('auth');

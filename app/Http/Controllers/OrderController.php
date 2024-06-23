@@ -30,12 +30,12 @@ class OrderController extends Controller
                 'quantity' => $request->input('quantity'),
             ]);
 
-            return redirect()->back();
+            return redirect()->back()->with('success', 'Cart item added successfully.');;
         }
 
         public function destroy_cart(Cart $cart){
             $cart->delete();
 
-            return redirect()->back();
+            return redirect()->back()->with('success', 'Cart item deleted successfully.');
         }
 }
