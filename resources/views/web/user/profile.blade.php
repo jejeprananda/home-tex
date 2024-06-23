@@ -25,14 +25,14 @@
                 </div>
                 <div class="flex-grow">
                     <p class="text-gray-600">Profile</p>
-                    <h4 class="text-gray-800 font-medium">{{ $user->name }}</h4>
+                    <h4 class="text-gray-800 font-medium">{{ auth()->user()->name }}</h4>
                 </div>
             </div>
 
             <div class="mt-6 bg-white shadow rounded p-4 divide-y divide-gray-200 space-y-4 text-gray-600">
                 <div class="space-y-1 pl-8">
-                    <a href="/users/{{ $user->id }}"
-                        class="relative hover:text-primary block capitalize transition {{ Request::is('users/' . $user->id) ? 'text-red-700 font-bold' : '' }}">
+                    <a href="/users/{{ auth()->user()->id }}"
+                        class="relative hover:text-primary block capitalize transition {{ Request::is('users/' . auth()->user()->id) ? 'text-red-700 font-bold' : '' }}">
                         Profile information
                     </a>
                 </div>
@@ -74,11 +74,11 @@
                             src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png"
                             alt="profile picture">
                         <div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
-                            <div>{{$user->name}}</div>
-                            <div class="text-sm text-gray-500 dark:text-gray-400 ">{{$user->phone_number}}</div>
-                            <div class="text-sm text-gray-500 dark:text-gray-400 ">{{$user->address}}</div>
+                            <div>{{auth()->user()->name}}</div>
+                            <div class="text-sm text-gray-500 dark:text-gray-400 ">{{auth()->user()->phone_number}}</div>
+                            <div class="text-sm text-gray-500 dark:text-gray-400 ">{{auth()->user()->address}}</div>
                             <hr>
-                            <p>{{$user->email}}</p>
+                            <p>{{auth()->user()->email}}</p>
                         </div>
 
 

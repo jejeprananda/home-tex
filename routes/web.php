@@ -72,6 +72,14 @@ Route::delete('/products/destroy/{product:id}', [ProductsController::class, 'des
 Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 
 // Order Module
-Route::get('/order/cart', [OrderController::class, 'cart'])->name('order/cart')->middleware('auth');
+Route::get('/order/cart/{cart:user_id}', [OrderController::class, 'cart'])->name('order/cart')->middleware('auth');
 
 Route::get('/order/checkout', [OrderController::class, 'checkout'])->name('order/checkout')->middleware('auth');
+
+Route::post('/order/add/cart', [OrderController::class, 'store_cart'])->name('order/add/cart')->middleware('auth');
+
+Route::delete('/order/destroy/{cart:id}', [OrderController::class, 'destroy_cart'])->name('order/destroy')->middleware('auth');
+
+// Cart_Modules
+
+

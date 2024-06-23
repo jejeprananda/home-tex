@@ -7,7 +7,8 @@
             <h1 class="text-6xl text-gray-800 font-medium mb-4 capitalize">
                 Koleksi terbaik untuk<br> Rumah anda
             </h1>
-            <p>Dari Inspirasi hingga Realisasi, <b class="text-primary">Home-Texere</b> Menyediakan alat elektronik dan kitchen ware yang Sempurna
+            <p>Dari Inspirasi hingga Realisasi, <b class="text-primary">Home-Texere</b> Menyediakan alat elektronik dan
+                kitchen ware yang Sempurna
                 untuk Anda!</p>
             <p>Temukan berbagai pilihan teknologi yang elegan dan praktis untuk melengkapi setiap kebutuhan.</p>
             <div class="mt-12">
@@ -137,9 +138,15 @@
                                 class="cursor-pointer block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add
                                 to cart</a>
                         @else
-                            <a onclick="swal()"
-                                class="cursor-pointer block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add
-                                to cart</a>
+                            <form action="/order/add/cart" method="post">
+                                @csrf
+                                <input type="text" name="user_id" id="user_id" value="{{auth()->user()->id}}">
+                                <input type="text" name="product_id" id="product_id" value="{{$product->id}}">
+                                <input type="text" name="quantity" id="quantity" value="1">
+                                <button
+                                    class="cursor-pointer block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add
+                                    to cart</button>
+                            </form>
                         @endif
                     @else
                         <a onclick="swal()"

@@ -76,4 +76,6 @@ class ProductsController extends Controller
 
             return redirect('/products/list');
         }
+
+
 }
