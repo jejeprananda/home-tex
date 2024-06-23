@@ -155,7 +155,7 @@
     <!-- ads -->
     <div class="container pb-16">
         <a href="/users/offer">
-            <img src="/images/offer.jpg" alt="ads" class="w-full">
+            <img src="/images/offer-a.jpg" alt="ads" class="w-full">
         </a>
     </div>
     <!-- ./ads -->
