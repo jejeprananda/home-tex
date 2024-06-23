@@ -41,7 +41,7 @@
                 <a href="/" class="text-gray-200 hover:text-white transition">Home</a>
                 <a href="/products" class="text-gray-200 hover:text-white transition">Shop</a>
                 <a href="#" class="text-gray-200 hover:text-white transition">About us</a>
-                <a href="#" class="text-gray-200 hover:text-white transition">Contact us</a>
+
             </div>
             <div class="flex">
                 {{-- Cart --}}
