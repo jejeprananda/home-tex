@@ -16,11 +16,11 @@ return new class extends Migration
             $table->string('product_id')->nullable(false); // VARCHAR
             $table->string('user_email')->nullable(false); // VARCHAR
             $table->integer('price')->nullable(false); // VARCHAR
-            $table->integer('discount'); // VARCHAR
+            $table->integer('discount')->nullable(false); // VARCHAR
             $table->integer('final_price')->nullable(false); // VARCHAR
-            $table->string('status'); // VARCHAR
-            $table->string('courier'); // VARCHAR
-            $table->string('order_resi'); // VARCHAR
+            $table->string('status')->nullable(false);
+            $table->string('courier')->nullable(false); // VARCHAR
+            $table->string('order_resi')->nullable(true); // VARCHAR
             $table->timestamps(); // created_at and updated_at columns
         });
     }

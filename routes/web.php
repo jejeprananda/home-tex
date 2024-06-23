@@ -76,7 +76,7 @@ Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 // Order Module
 Route::get('/order/cart/{cart:user_id}', [OrderController::class, 'cart'])->name('order/cart')->middleware('auth');
 
-Route::get('/order/checkout', [OrderController::class, 'checkout'])->name('order/checkout')->middleware('auth');
+Route::get('/order/checkout/{cart:user_id}', [OrderController::class, 'checkout'])->name('order/checkout')->middleware('auth');
 
 Route::post('/order/add/cart', [OrderController::class, 'store_cart'])->name('order/add/cart')->middleware('auth');
 

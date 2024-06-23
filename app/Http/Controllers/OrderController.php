@@ -18,8 +18,14 @@ class OrderController extends Controller
         ]);
     }
 
-    public function checkout(){
-        return view('web.order.checkout');
+    public function checkout($user_id){
+        $carts= Cart::where('user_id', $user_id)->get();
+        $products = Product::get();
+
+        return view('web.order.checkout', [
+            'carts' => $carts,
+            'products' => $products
+        ]);
     }
 
     public function store_cart(Request $request){
