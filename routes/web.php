@@ -7,6 +7,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\OrderController;
 
 Route::get('/wishlist', function () {
     return view('web/product/wishlist');
@@ -69,3 +70,8 @@ Route::delete('/products/destroy/{product:id}', [ProductsController::class, 'des
 //Admin Module
 
 Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+
+// Order Module
+Route::get('/order/cart', [OrderController::class, 'cart'])->name('order/cart')->middleware('auth');
+
+Route::get('/order/checkout', [OrderController::class, 'checkout'])->name('order/checkout')->middleware('auth');
