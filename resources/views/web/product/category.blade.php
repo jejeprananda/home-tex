@@ -135,9 +135,15 @@
                             </div>
                         </div>
                         @auth
-                            <a onclick="swal()"
-                                class="cursor-pointer block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add
-                                to cart</a>
+                            @if (auth()->user()->role === '0')
+                                <a onclick="swalAdmin()"
+                                    class="cursor-pointer block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add
+                                    to cart</a>
+                            @else
+                                <a onclick="swal()"
+                                    class="cursor-pointer block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add
+                                    to cart</a>
+                            @endif
                         @else
                             <a onclick="swal()"
                                 class=" cursor-pointer block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add

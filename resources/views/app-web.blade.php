@@ -53,6 +53,16 @@
                 showConfirmButton: false,
             });
         }
+
+        function swalAdmin() {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Admin tidak dapat menambah keranjang!",
+                showCloseButton: true,
+                showConfirmButton: false,
+            });
+        }
     </script>
 </body>
 

@@ -49,14 +49,21 @@ class UserController extends Controller
 
     public function update(UserRequest $request, User $user){
 
-       $user->update($request->validated());
+        $request->validated();
 
-       return redirect('/users');
+        $user->update($request->all());
+
+        return redirect('/');
     }
 
     public function destroy(User $user){
         $user->delete();
 
         return redirect('/users');
+    }
+
+    public function offer(){
+
+        return view('web.user.offer');
     }
 }

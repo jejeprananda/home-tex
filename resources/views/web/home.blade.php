@@ -5,13 +5,13 @@
     <div class="bg-cover bg-no-repeat bg-center py-36" style="background-image: url('images/banner-bg.jpg');">
         <div class="container">
             <h1 class="text-6xl text-gray-800 font-medium mb-4 capitalize">
-                Koleksi terbaik untuk<br> Dekorasi rumah
+                Koleksi terbaik untuk<br> Rumah anda
             </h1>
-            <p>Dari Inspirasi hingga Realisasi, <b class="text-primary">Home-Texere</b> Menyediakan Furnitur yang Sempurna
+            <p>Dari Inspirasi hingga Realisasi, <b class="text-primary">Home-Texere</b> Menyediakan alat elektronik dan kitchen ware yang Sempurna
                 untuk Anda!</p>
-            <p>Temukan berbagai pilihan desain furnitur yang elegan dan praktis untuk melengkapi setiap ruangan.</p>
+            <p>Temukan berbagai pilihan teknologi yang elegan dan praktis untuk melengkapi setiap kebutuhan.</p>
             <div class="mt-12">
-                <a href="#"
+                <a href="/products"
                     class="bg-primary border border-primary text-white px-8 py-3 font-medium
                                 rounded-md hover:bg-transparent hover:text-primary">Belanja
                     Sekarang</a>
@@ -132,9 +132,15 @@
                         </div>
                     </div>
                     @auth
-                        <a onclick="swal()"
-                            class="cursor-pointer block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add
-                            to cart</a>
+                        @if (auth()->user()->role === '0')
+                            <a onclick="swalAdmin()"
+                                class="cursor-pointer block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add
+                                to cart</a>
+                        @else
+                            <a onclick="swal()"
+                                class="cursor-pointer block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add
+                                to cart</a>
+                        @endif
                     @else
                         <a onclick="swal()"
                             class="cursor-pointer block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add
@@ -148,7 +154,7 @@
 
     <!-- ads -->
     <div class="container pb-16">
-        <a href="#">
+        <a href="/users/offer">
             <img src="/images/offer.jpg" alt="ads" class="w-full">
         </a>
     </div>
@@ -194,9 +200,15 @@
                         </div>
                     </div>
                     @auth
-                        <a onclick="swal()"
-                            class="cursor-pointer block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add
-                            to cart</a>
+                        @if (auth()->user()->role === '0')
+                            <a onclick="swalAdmin()"
+                                class="cursor-pointer block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add
+                                to cart</a>
+                        @else
+                            <a onclick="swal()"
+                                class="cursor-pointer block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add
+                                to cart</a>
+                        @endif
                     @else
                         <a onclick="swal()"
                             class=" cursor-pointer block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add

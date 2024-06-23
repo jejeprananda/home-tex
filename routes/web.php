@@ -23,6 +23,8 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 // User Module
 Route::get('/users', [UserController::class, 'index'])->name('users')->middleware('auth');
 
+Route::get('/users/offer', [UserController::class, 'offer'])->name('users/offer');
+
 Route::get('/users/{user:id}', [UserController::class, 'show'])->name('show')->middleware('auth');
 
 Route::get('/user/create', [UserController::class, 'create'])->name('user/create')->middleware('guest');

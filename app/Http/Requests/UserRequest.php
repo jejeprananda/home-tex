@@ -27,7 +27,8 @@ class UserRequest extends FormRequest
                     'email',
                     Rule::unique('tb_user', 'email')
                 ],
-                'password' => ['required', 'min:6']
+                'password' => ['required', 'min:6'],
+                'role' => []
             ]
         ];
     }
