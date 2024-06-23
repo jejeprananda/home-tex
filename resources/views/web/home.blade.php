@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- banner -->
-    <div class="bg-cover bg-no-repeat bg-center py-36" style="background-image: url('images/banner-bg.jpg');">
+    <div class="bg-cover bg-no-repeat bg-center py-36" style="background-image: url('images/banner-bg-a.jpg');">
         <div class="container">
             <h1 class="text-6xl text-white font-medium mb-4 capitalize">
                 Koleksi terbaik untuk<br> Rumah anda

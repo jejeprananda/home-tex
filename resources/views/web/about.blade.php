@@ -1,7 +1,7 @@
 @extends('app-web')
 
 @section('content')
-    <section class="dark:bg-gray-900" style="background-image: url('images/banner-bg.jpg');">
+    <section class="dark:bg-gray-900" style="background-image: url('images/banner-bg-a.jpg');">
         <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
             <div class="w-3/4 bg-gray-700 px-16 py-8">
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white">Selamat datang di Home Texere</h2>
