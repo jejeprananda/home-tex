@@ -45,22 +45,24 @@
             </div>
             <div class="flex">
                 {{-- Cart --}}
-                <a href="/order/cart/{{ auth()->user()->id }}">
-                    <button id="cartDropdownButton1" type="button"
-                        class="inline-flex text-white items-center justify-center p-2 rounded-lg text-sm font-medium leading-none text-gray-900 dark:text-white dark:hover:bg-gray-700">
-                        <div class="relative sm:me-2.5">
-                            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                                height="24" fill="none" viewBox="0 0 24 24">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312" />
-                            </svg>
-                        </div>
-                        <p>
-                            Cart
-                        </p>
-                    </button>
-                </a>
+                @auth
+                    <a href="/order/cart/{{ auth()->user()->id }}">
+                        <button id="cartDropdownButton1" type="button"
+                            class="inline-flex text-white items-center justify-center p-2 rounded-lg text-sm font-medium leading-none text-gray-900 dark:text-white dark:hover:bg-gray-700">
+                            <div class="relative sm:me-2.5">
+                                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312" />
+                                </svg>
+                            </div>
+                            <p>
+                                Cart
+                            </p>
+                        </button>
+                    </a>
+                @endauth
                 {{-- Profile --}}
                 @auth
                     @if (auth()->user()->role == '0')
