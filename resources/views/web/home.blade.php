@@ -140,9 +140,9 @@
                         @else
                             <form action="/order/add/cart" method="post">
                                 @csrf
-                                <input type="text" name="user_id" id="user_id" value="{{auth()->user()->id}}">
-                                <input type="text" name="product_id" id="product_id" value="{{$product->id}}">
-                                <input type="text" name="quantity" id="quantity" value="1">
+                                <input hidden type="text" name="user_id" id="user_id" value="{{auth()->user()->id}}">
+                                <input hidden type="text" name="product_id" id="product_id" value="{{$product->id}}">
+                                <input hidden type="text" name="quantity" id="quantity" value="1">
                                 <button
                                     class="cursor-pointer block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">Add
                                     to cart</button>
