@@ -2,7 +2,7 @@
 <footer class="bg-white pt-16 pb-12 border-t border-gray-100">
     <div class="container grid grid-cols-3">
         <div class="col-span-1 space-y-8 mr-2">
-            <img src="/images/logo.png" alt="logo" class="h-24 bg-gray-800">
+            <img src="/images/logo-x.png" alt="logo" class="h-24 bg-gray-800">
             <div class="mr-2">
                 <p class="text-gray-500">
                     Jika anda punya saran untuk kami, silakan hubungi kami

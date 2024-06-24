@@ -2,7 +2,9 @@
 <div>
     <nav class="bg-gray-800">
         <div class="container flex">
-            <a href="/"><img src="/images/logo.png" class="h-20 relative left-0"></a>
+            <div class="w-48 flex justify-center">
+                <a href="/"><img src="/images/logo-x.png" class="h-20 relative left-0"></a>
+            </div>
             <div
                 class="px-8 w-48 py-8 bg-primary md:flex justify-center item-center text-center cursor-pointer relative group hidden">
                 <span class="capitalize ml-2 text-white">Categories</span>
@@ -97,10 +99,10 @@
                                 <li><a href="user/profile" title=""
                                         class="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600">
                                         Akun Saya </a></li>
-                                <li><a href="/order/{{auth()->user()->email}}" title=""
+                                <li><a href="/order/{{ auth()->user()->email }}" title=""
                                         class="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600">
-                                        Penasan Saya </a></li>
-                                <li><a href="users/offer" title=""
+                                        Pesanan Saya </a></li>
+                                <li><a href="/users/offer" title=""
                                         class="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600">
                                         Member </a></li>
                             </ul>

@@ -15,9 +15,8 @@
             return $products->firstWhere('id', $cart->product_id)->id;
         })
     @endphp
-    {{$productsID}}
     <div class="w-full justify-center item-center">
-        <section class="bg-white py-8 antialiased dark:bg-gray-900 md:py-16">
+        <section class="bg-white max-w-screen py-8 antialiased dark:bg-gray-900 md:py-16">
             <div action="#" class="mx-auto max-w-screen-xl px-4 2xl:px-0">
                 <h2 class="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">Checkout</h2>
 
