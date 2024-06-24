@@ -44,6 +44,7 @@
                                     <p class="text-red-400 text-sm">{{ $message }}</p>
                                 @enderror
                             </div>
+                            <input type="text" name="role" id="role" value="1" hidden>
                             <div>
                                 <label for="email" class="text-gray-600 mb-2 block">Email address</label>
                                 <input type="email" name="email" id="email"
