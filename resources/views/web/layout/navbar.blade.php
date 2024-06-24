@@ -100,7 +100,7 @@
                                 <li><a href="/order/{{auth()->user()->email}}" title=""
                                         class="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600">
                                         Penasan Saya </a></li>
-                                <li><a href="#" title=""
+                                <li><a href="users/member" title=""
                                         class="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600">
                                         Member </a></li>
                             </ul>
