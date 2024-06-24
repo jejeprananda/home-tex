@@ -7,10 +7,12 @@
             <h1 class="text-6xl text-white font-medium mb-4 capitalize">
                 Koleksi terbaik untuk<br> Rumah anda
             </h1>
-            <p class="text-white">Dari Inspirasi hingga Realisasi, <b class="text-primary">Home-Texere</b> Menyediakan alat elektronik dan
+            <p class="text-white">Dari Inspirasi hingga Realisasi, <b class="text-primary">Home-Texere</b> Menyediakan alat
+                elektronik dan
                 kitchen ware yang Sempurna
                 untuk Anda!</p>
-            <p class="text-white">Temukan berbagai pilihan teknologi yang elegan dan praktis untuk melengkapi setiap kebutuhan.</p>
+            <p class="text-white">Temukan berbagai pilihan teknologi yang elegan dan praktis untuk melengkapi setiap
+                kebutuhan.</p>
             <div class="mt-12">
                 <a href="/products"
                     class="bg-primary border border-primary text-white px-8 py-3 font-medium
@@ -160,10 +162,18 @@
     <!-- ./new arrival -->
 
     <!-- ads -->
+
     <div class="container pb-16">
-        <a href="/users/offer">
-            <img src="/images/offer-a.jpg" alt="ads" class="w-full">
-        </a>
+        @auth
+            <a href="/users/offer">
+                <img src="/images/offer-a.jpg" alt="ads" class="w-full">
+            </a>
+        @else
+            <a href="/login">
+                <img src="/images/offer-a.jpg" alt="ads" class="w-full">
+            </a>
+        @endauth
+
     </div>
     <!-- ./ads -->
 
