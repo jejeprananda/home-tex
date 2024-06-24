@@ -15,6 +15,18 @@ class Order extends Model
      *
      * @var array<int, string>
      */
+    protected $fillable = [
+        'product_id',
+        'user_email',
+        'price',
+        'discount',
+        'final_price',
+        'status',
+        'courier',
+        'order_resi',
+    ];
 
-
+    protected $casts = [
+        'product_id' => 'array',
+    ];
 }

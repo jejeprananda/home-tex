@@ -78,7 +78,15 @@ Route::get('/order/cart/{cart:user_id}', [OrderController::class, 'cart'])->name
 
 Route::get('/order/checkout/{cart:user_id}', [OrderController::class, 'checkout'])->name('order/checkout')->middleware('auth');
 
+Route::get('/order/detail/{order:id}', [OrderController::class, 'detail'])->name('order/detail')->middleware('auth');
+
 Route::post('/order/add/cart', [OrderController::class, 'store_cart'])->name('order/add/cart')->middleware('auth');
+
+Route::post('/order/store', [OrderController::class, 'store'])->name('order/store')->middleware('auth');
+
+Route::get('/order/{user:email}', [OrderController::class, 'my_order'])->name('user/order')->middleware('auth');
+
+Route::put('/order/cancel/{order:id}', [OrderController::class, 'cancel'])->name('order/cancel')->middleware('auth');
 
 Route::delete('/order/destroy/{cart:id}', [OrderController::class, 'destroy_cart'])->name('order/destroy')->middleware('auth');
 
