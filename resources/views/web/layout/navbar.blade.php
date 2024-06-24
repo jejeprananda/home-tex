@@ -12,25 +12,25 @@
                 <!-- dropdown -->
                 <div
                     class="absolute z-40 w-full left-0 top-full bg-white shadow-md py-3 divide-y divide-gray-300 divide-dashed group-hover:opacity-100 transition duration-300 invisible group-hover:visible">
-                    <a href="/produks/category/AC" class="flex bg-white items-center px-6 py-3 hover:bg-gray-100 transition">
+                    <a href="/products/category/AC" class="flex bg-white items-center px-6 py-3 hover:bg-gray-100 transition">
                         <span class="ml-6 text-gray-600 text-sm">AC</span>
                     </a>
-                    <a href="/produks/category/TV" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                    <a href="/products/category/TV" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
                         <span class="ml-6 text-gray-600 text-sm">TV</span>
                     </a>
-                    <a href="/produks/category/CUCI" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                    <a href="/products/category/CUCI" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
                         <span class="ml-6 text-gray-600 text-sm">Mesin Cuci</span>
                     </a>
-                    <a href="/produks/category/KW" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                    <a href="/products/category/KW" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
                         <span class="ml-6 text-gray-600 text-sm">Kitchen Ware</span>
                     </a>
-                    <a href="/produks/category/KULKAS" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                    <a href="/products/category/KULKAS" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
                         <span class="ml-6 text-gray-600 text-sm">Kulkas</span>
                     </a>
-                    <a href="/produks/category/BLENDER" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                    <a href="/products/category/BLENDER" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
                         <span class="ml-6 text-gray-600 text-sm">Blender</span>
                     </a>
-                    <a href="/produks/category/VACUUM" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                    <a href="/products/category/VACUUM" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
                         <span class="ml-6 text-gray-600 text-sm">Vacuum Cleaner</span>
                     </a>
                 </div>
