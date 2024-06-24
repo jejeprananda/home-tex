@@ -102,8 +102,9 @@
             @foreach ($products->sortByDesc('created_at')->take(4) as $product)
                 <div class="bg-white shadow rounded overflow-hidden group">
                     <div class="relative">
+                        {{$product->img[0]}}
                         <a href="products/show/{{ $product->id }}">
-                            <img src="{{ $product->img[0] }}" alt="product 1" class="w-full h-48 object-cover">
+                            <img src="/{{$product->img[0]}}" alt="product 1" class="w-full h-48 object-cover">
                         </a>
                     </div>
                     <div class="pt-4 pb-3 px-4">
